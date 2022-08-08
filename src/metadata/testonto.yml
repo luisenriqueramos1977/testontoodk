@@ -1,0 +1,27 @@
+# PURL configuration for http://purl.obolibrary.org/obo/testonto
+
+idspace: TESTONTO
+base_url: /obo/testonto
+
+products:
+- testonto.owl: https://raw.githubusercontent.com/cmungall/testonto/main/testonto.owl
+- testonto.obo: https://raw.githubusercontent.com/cmungall/testonto/main/testonto.obo
+
+term_browser: ontobee
+example_terms:
+- TESTONTO_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/cmungall/testonto/v
+
+- prefix: /tracker/
+  replacement: https://github.com/cmungall/testonto/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/TESTONTO?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/cmungall/testonto/main/
